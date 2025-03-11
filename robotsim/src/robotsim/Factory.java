@@ -14,8 +14,7 @@ public class Factory {
 	private boolean checkRobotName (String name) {
 		for (int i=0;i<robots.size();i++) {
 			if (robots.get(i).getName()==name) {
-				return false; 
-				
+				return false; 	
 			}	
 		}
 		return true; 
@@ -23,9 +22,21 @@ public class Factory {
 	}
 	public boolean addRobot(String name) {
 		if(this.checkRobotName(name)==true) {
-			robots.add( name);
-			
+			Robot r= new Robot(name,0.0);
+			robots.add(r);
+			return true;
+		}else {return false;}
+		
+	}
+
+	@Override
+	public String toString() {
+		for(int i=0;i<this.robots.size();i++) {
+			return robots.get(i).getName();
 		}
+		return "";
+		
+		
 	}
 	
 	
