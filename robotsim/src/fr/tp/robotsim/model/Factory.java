@@ -1,4 +1,5 @@
-package robotsim;
+package fr.tp.robotsim.model;
+
 
 import java.util.ArrayList;
 
@@ -28,16 +29,31 @@ public class Factory {
 		}else {return false;}
 		
 	}
+	
 
-	@Override
-	public String toString() {
-		for(int i=0;i<this.robots.size();i++) {
-			return robots.get(i).getName();
-		}
-		return "";
-		
-		
+	public String getName() {
+		return name;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Robot> getRobots() {
+		return robots;
+	}
+
+	public void setRobots(ArrayList<Robot> robots) {
+		this.robots = robots;
+	}
+
+	public void printToConsole() {
+		System.out.println(name);
+		for(int i=0;i<robots.size();i++) {
+			System.out.println(robots.get(i).getName());
+		}
+	}
+
 	
 	
 
