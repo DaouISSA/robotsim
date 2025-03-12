@@ -13,8 +13,8 @@ public class Factory {
 	}
 	
 	private boolean checkRobotName (String name) {
-		for (int i=0;i<robots.size();i++) {
-			if (robots.get(i).getName()==name) {
+		for (Robot myRobot: robots) {
+			if (myRobot.getName().equals(name)) {
 				return false; 	
 			}	
 		}
@@ -49,8 +49,8 @@ public class Factory {
 
 	public void printToConsole() {
 		System.out.println(name);
-		for(int i=0;i<robots.size();i++) {
-			System.out.println(robots.get(i).getName());
+		for(Robot r : robots) {
+			System.out.println(r.getName());
 		}
 	}
 
