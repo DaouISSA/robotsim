@@ -24,6 +24,7 @@ public class TestRobotSim {
 		r.addComponent(d);
 		Engine e = new Engine(new Point(3,3),10,10,"machine1",3);
 		Factory f= new Factory(compo,new Point(5,5),40,40,"usine1",6);
+		
 		f.addComponent(e);
 		r.addComponent(e);
 		r.removeComponent(e);
