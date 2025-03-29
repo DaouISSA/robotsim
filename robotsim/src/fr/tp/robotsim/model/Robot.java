@@ -1,38 +1,11 @@
-package robotsim;
+package fr.tp.robotsim.model;
 
-public class Robot {
-	private String name;
+public class Robot extends Component {
 	private double speed;
 	
-	public Robot(String name, double speed) {
-		super();
-		this.name = name;
+	public Robot( double speed, Point position, double length,double width,String name,int id) {
+		super(position,length,width,name, id);
 		this.speed = speed;
 	}
-
-	@Override
-	public String toString() {
-		return "je m'appelle "+ name + " et j'avance à "+ this.speed  + " Km/h";
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(double speed) {
-		this.speed = speed;
-	}
-	
-	
-	
-	
 
 }

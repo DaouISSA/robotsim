@@ -1,17 +1,14 @@
 package fr.tp.robotsim.model;
 
-
 import java.util.ArrayList;
 
-public class Factory extends Component {
- 
+public class Room extends Component {
+	
 	private ArrayList<Component> components;
 	
-	
-	
-	public Factory(ArrayList<Component> components, Point position, double longueur,double largeur,String name,int id ) {
-		super(position,longueur,largeur,name, id);
-		this.components=components;
+	public Room (ArrayList<Component> components,Point position, double length,double width,String name,int id) {
+		super(position, length,width,name, id);
+		this.components= components;
 	}
 	
 	public boolean checkComponentId(Component compo) {
