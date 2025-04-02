@@ -1,67 +1,52 @@
 package fr.tp.robotsim.model;
 
-public abstract class Component {
-	
-	private Point position;
-	private double length;
-	private double width;
-	private String name; 
+import fr.tp.inf112.projects.canvas.model.Figure;
+import fr.tp.inf112.projects.canvas.model.Shape;
+import fr.tp.inf112.projects.canvas.model.Style;
+
+public class Component implements Figure {
+	private String name;
+	private Shape shape;
 	private int id;
+	private Vertex vertex;
+	private Style style;
 	
-	public Component(Point position, double length,double width,String name,int id ) {
-		this.position=position;
-		this.length=length;
-		this.width= width;
+	public Component(String name, Shape shape, int id, Vertex vertex, Style style) {
 		this.name=name;
+		this.shape=shape;
 		this.id=id;
+		this.vertex=vertex; 
+		this.style=style;
 	}
 
-	public Point getPosition() {
-		return position;
-	}
-
-	public void setPosition(Point position) {
-		this.position = position;
-	}
-
-	public double getLength() {
-		return length;
-	}
-
-	public void setLength(double length) {
-		this.length = length;
-	}
-
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
+	@Override
 	public String getName() {
-		return name;
+		// TODO Auto-generated method stub
+		return this.name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	@Override
+	public int getxCoordinate() {
+		// TODO Auto-generated method stub
+		return vertex.getxCoordinate();
 	}
 
-	public int getId() {
-		return id;
+	@Override
+	public int getyCoordinate() {
+		// TODO Auto-generated method stub
+		return vertex.getyCoordinate();
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	@Override
+	public Style getStyle() {
+		// TODO Auto-generated method stub
+		return this.style;
 	}
 
-	
-	
-	
-	
-	
-	
-	
+	@Override
+	public Shape getShape() {
+		// TODO Auto-generated method stub
+		return this.shape;
+	}
 
 }
