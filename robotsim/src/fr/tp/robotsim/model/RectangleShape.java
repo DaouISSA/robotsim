@@ -1,6 +1,6 @@
 package fr.tp.robotsim.model;
 
-public class RectangleShape implements fr.tp.inf112.projects.canvas.model.RectangleShape {
+public class RectangleShape extends Shape implements fr.tp.inf112.projects.canvas.model.RectangleShape {
 	private int width;
 	private int height;
 	

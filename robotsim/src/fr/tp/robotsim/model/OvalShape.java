@@ -1,6 +1,6 @@
 package fr.tp.robotsim.model;
 
-public class OvalShape implements fr.tp.inf112.projects.canvas.model.OvalShape {
+public class OvalShape extends Shape implements fr.tp.inf112.projects.canvas.model.OvalShape  {
 	private int width;
 	private int height;
 	
@@ -19,6 +19,10 @@ public class OvalShape implements fr.tp.inf112.projects.canvas.model.OvalShape {
 	public int getHeight() {
 		// TODO Auto-generated method stub
 		return this.height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
 	}
 
 }

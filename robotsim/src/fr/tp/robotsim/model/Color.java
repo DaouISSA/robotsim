@@ -1,6 +1,17 @@
 package fr.tp.robotsim.model;
 
 public class Color implements fr.tp.inf112.projects.canvas.model.Color {
+	
+	private int red; 
+	private int green;
+	private int blue;
+	
+	
+	public Color(int red, int green, int blue) {
+		this.red=red;
+		this.green=green;
+		this.blue=blue;
+	}
 
 	@Override
 	public int getRedComponent() {
